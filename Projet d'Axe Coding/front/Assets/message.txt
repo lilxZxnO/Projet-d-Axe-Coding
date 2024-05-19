@@ -1,0 +1,71 @@
+Un fichier Unity de scène (.unity) peut parfois rencontrer des conflits de fusion si plusieurs personnes modifient le fichier en même temps et essaient de le fusionner dans un système de contrôle de version (comme Git). Les fichiers de scène Unity sont en fait des fichiers texte, donc vous pouvez les ouvrir dans un éditeur de texte pour résoudre les conflits.
+
+Voici les étapes pour résoudre les conflits dans un fichier de scène Unity :
+
+Ouvrez le fichier de scène dans un éditeur de texte :
+Utilisez un éditeur de texte comme Visual Studio Code, Sublime Text, Notepad++, ou même Visual Studio pour ouvrir le fichier Etage 1.unity.
+
+Recherchez les marqueurs de conflit :
+Les conflits sont généralement délimités par des marqueurs comme <<<<<<<, =======, et >>>>>>>. Par exemple :
+
+plaintext
+Copier le code
+<<<<<<< HEAD
+Votre version du fichier
+=======
+La version de l'autre branche
+>>>>>>> branch-name
+Résolvez les conflits :
+Vous devez décider quelles modifications garder. Vous pouvez conserver les modifications de votre version, les modifications de l'autre branche, ou une combinaison des deux. Supprimez les marqueurs de conflit après avoir résolu les différences.
+
+Par exemple, si vous voyez quelque chose comme :
+
+plaintext
+Copier le code
+<<<<<<< HEAD
+m_RootOrder: 1
+=======
+m_RootOrder: 2
+>>>>>>> other-branch
+Décidez quelle version (1 ou 2) est correcte, puis supprimez les marqueurs et les lignes inutiles.
+
+Sauvegardez le fichier :
+Après avoir résolu tous les conflits et supprimé les marqueurs, sauvegardez le fichier.
+
+Rechargez la scène dans Unity :
+Retournez dans Unity et rechargez la scène. Unity détectera les modifications et mettra à jour la scène en conséquence.
+
+Testez la scène :
+Assurez-vous que la scène fonctionne comme prévu et qu'aucun élément important n'est manquant ou corrompu.
+
+Voici un exemple concret de ce à quoi un conflit pourrait ressembler et comment le résoudre :
+
+Conflit original :
+
+plaintext
+Copier le code
+m_RootOrder: 1
+<<<<<<< HEAD
+m_SomeValue: 10
+=======
+m_SomeValue: 20
+>>>>>>> branch-xyz
+Résolu en gardant la valeur 10 :
+
+plaintext
+Copier le code
+m_RootOrder: 1
+m_SomeValue: 10
+Résolu en combinant les deux (si c'est logique) :
+
+plaintext
+Copier le code
+m_RootOrder: 1
+m_SomeValue: 15 // Une moyenne ou une nouvelle valeur en combinant les deux
+Résolu en gardant la valeur 20 :
+
+plaintext
+Copier le code
+m_RootOrder: 1
+m_SomeValue: 20
+Assurez-vous de tester la scène après avoir résolu les conflits pour vérifier que tout fonctionne comme prévu.

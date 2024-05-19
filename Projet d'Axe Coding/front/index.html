@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="Harry_Potter_wordmark.svg.png" alt=""></a>
+        <div class="nav-links"><ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Characters</a></li>
+            <li><a href="#">Summon</a></li>
+            <li><a href="#">You'r Collection</a></li>
+            <li><a href="#">profil</a></li>
+        </ul></div>
+        <img src="menu-btn.png" alt="" class="menu-hamburger">
+    </nav>
+    <header></header>
+</body>
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
+</html>
