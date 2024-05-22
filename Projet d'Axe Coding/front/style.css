@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'HarryP';
+    src: url('font/HARRYP__.TTF') format('truetype');
+}
+
+body {
+    font-family: 'HarryP', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.navbar a {
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    text-align: center;
+}
+
+.intro, .houses, .characters, .news {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.intro h2, .houses h2, .characters h2, .news h2 {
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.house, .character {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.house img, .character img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.news article {
+    margin-bottom: 20px;
+}
+
+.news h3 {
+    margin-top: 0;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: red;
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    width: 35px;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    .house, .character {
+        width: 80%;
+        margin: 10px auto;
+    }
+}

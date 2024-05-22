@@ -3,29 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HP</title>
+    <title>Harry Potter Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <video id="bg-video" autoplay loop muted>
+        <source src="Assets/hogwarts-legacy-dark-version-moewalls-com.mp4" type="video/mp4">
+    </video>
     <nav class="navbar">
-        <a href="#" class="logo"><img src="Harry_Potter_wordmark.svg.png" alt=""></a>
-        <div class="nav-links"><ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Summon</a></li>
-            <li><a href="#">You'r Collection</a></li>
-            <li><a href="#">profil</a></li>
-        </ul></div>
-        <img src="menu-btn.png" alt="" class="menu-hamburger">
+        <a href="#" class="logo"><img src="Assets/Harry_Potter_wordmark.svg.png" alt=""></a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="Characters.html">Characters</a></li>
+                <li><a href="summon.html">Summon</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+        </div>
+        <img src="Assets/menu-btn.png" alt="" class="menu-hamburger">
     </nav>
-    <header></header>
+    <header>
+        <h1>Welcome to Hogwarts</h1>
+        <p>Discover the magic of the Harry Potter universe</p>
+    </header>
+    <section class="intro">
+        <h2>About This Site</h2>
+        <p>Welcome to our Harry Potter fan site. Here, you can explore the magical world of Harry Potter, discover your favorite characters, and join the community of wizards and witches.</p>
+    </section>
+    <section class="houses">
+        <h2>Hogwarts Houses</h2>
+        <div class="house gryffindor">
+            <h3>Gryffindor</h3>
+            <p>Bravery, daring, nerve, and chivalry</p>
+        </div>
+        <div class="house hufflepuff">
+            <h3>Hufflepuff</h3>
+            <p>Hard work, patience, loyalty, and fair play</p>
+        </div>
+        <div class="house ravenclaw">
+            <h3>Ravenclaw</h3>
+            <p>Intelligence, learning, wisdom, and wit</p>
+        </div>
+        <div class="house slytherin">
+            <h3>Slytherin</h3>
+            <p>Ambition, cunning, leadership, and resourcefulness</p>
+        </div>
+    </section>
+    <section class="characters">
+        <h2>Popular Characters</h2>
+        <div class="character">
+            <img src="Assets/harry_potter.png" alt="Harry Potter">
+            <h3>Harry Potter</h3>
+        </div>
+        <div class="character">
+            <img src="Assets/hermione_granger.png" alt="Hermione Granger">
+            <h3>Hermione Granger</h3>
+        </div>
+        <div class="character">
+            <img src="Assets/ron_weasley.png" alt="Ron Weasley">
+            <h3>Ron Weasley</h3>
+        </div>
+    </section>
+    <section class="news">
+        <h2>Latest News</h2>
+        <article>
+            <h3>New Movie Announcement</h3>
+            <p>The wizarding world is expanding with a new movie set to release next year...</p>
+        </article>
+        <article>
+            <h3>Hogwarts Legacy Game</h3>
+            <p>Experience the magic like never before with the new Hogwarts Legacy game...</p>
+        </article>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuHamburger = document.querySelector('.menu-hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            menuHamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-menu');
+            });
+        });
+    </script>
 </body>
-<script>
-    const menuHamburger = document.querySelector(".menu-hamburger")
-        const navLinks = document.querySelector(".nav-links")
- 
-        menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile-menu')
-        })
-</script>
 </html>

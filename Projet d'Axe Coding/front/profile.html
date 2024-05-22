@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="profil.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="Assets/Harry_Potter_wordmark.svg.png" alt="Harry Potter Logo"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Characters.html">Characters</a></li>
+                <li><a href="summon.html">Summon</a></li>
+                <li><a href="profil.html">Profile</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+                <li><button onclick="logout()">Logout</button></li>
+            </ul>
+        </div>
+        <img src="Assets/menu-btn.png" alt="Menu" class="menu-hamburger">
+    </nav>
+
+    <header>
+        <h1>Welcome to Your Dashboard, <span id="user-name">John Doe</span></h1>
+    </header>
+
+    <main>
+        <div class="grid-container">
+            <section class="grid-item cards-section">
+                <h2>Your Cards</h2>
+                <div class="cards-container"></div>
+            </section>
+
+            <section class="grid-item friends-section">
+                <h2>Your Friends</h2>
+                <ul class="friends-list"></ul>
+            </section>
+
+            <section class="grid-item trades-section">
+                <h2>Trade Requests</h2>
+                <ul class="trade-requests-list"></ul>
+            </section>
+        </div>
+    </main>
+
+    <script src="profil.js"></script>
+    <script src="getprofile.js"></script>
+    <script src="logout.js"></script>
+</body>
+</html>

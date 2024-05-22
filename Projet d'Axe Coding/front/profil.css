@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'HarryP';
+    src: url('font/HARRYP__.TTF') format('truetype');
+}
+
+body {
+    font-family: 'HarryP', Arial, sans-serif;
+    background-image: url('Assets/release_1_hogwarts.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li a,
+.navbar .nav-links ul li button {
+    color: #ffd700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'HarryP', Arial, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.navbar .nav-links ul li button:hover,
+.navbar .nav-links ul li a:hover {
+    color: red;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    width: 35px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+    border-bottom: 2px solid #ffd700;
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: #000;
+}
+
+.grid-item h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #ffd700;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f0e6d2;
+    border: 2px solid #5a372c;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    color: #5a372c;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #3c2f2f;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.card .heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.card .heart-icon.favorited {
+    color: #ff0000;
+}
+
+.friends-list,
+.trade-requests-list {
+    list-style: none;
+    padding: 0;
+}
+
+.friends-list li,
+.trade-requests-list li {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+.trade-requests-list li .card {
+    margin: 0 10px 0 0;
+}
+
+.trade-requests-list li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffd700;
+    color: black;
+}
+
+.trade-requests-list li button:hover {
+    background-color: #ffc107;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}

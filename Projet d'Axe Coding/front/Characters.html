@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Characters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="Assets/Harry_Potter_wordmark.svg.png" alt=""></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="character.html">Characters</a></li>
+                <li><a href="summon.html">Summon</a></li>
+
+                <li><a href="profil.html">Profile</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+        </div>
+        <img src="Assets/menu-btn.png" alt="" class="menu-hamburger">
+    </nav>
+    <header>
+        <h1>Harry Potter Characters</h1>
+    </header>
+    <div class="filter-container">
+        <button class="filter-button" data-house="All">All</button>
+        <button class="filter-button" data-house="Gryffindor">Gryffindor</button>
+        <button class="filter-button" data-house="Ravenclaw">Ravenclaw</button>
+        <button class="filter-button" data-house="Hufflepuff">Hufflepuff</button>
+        <button class="filter-button" data-house="Slytherin">Slytherin</button>
+        <button class="filter-button" data-house="Unknown">Unknown</button>
+    </div>
+    <div id="gryffindor" class="house-container">
+        <h2>Gryffindor <img src="Assets/1704953-200.png" alt="Gryffindor Icon"></h2>
+        <div class="cards-container"></div>
+    </div>
+    <div id="ravenclaw" class="house-container">
+        <h2>Ravenclaw <img src="Assets/1704954-200.png" alt="Ravenclaw Icon"></h2>
+        <div class="cards-container"></div>
+    </div>
+    <div id="hufflepuff" class="house-container">
+        <h2>Hufflepuff <img src="Assets/images.png" alt="Hufflepuff Icon"></h2>
+        <div class="cards-container"></div>
+    </div>
+    <div id="slytherin" class="house-container">
+        <h2>Slytherin <img src="Assets/images (1).png" alt="Slytherin Icon"></h2>
+        <div class="cards-container"></div>
+    </div>
+    <div id="unknown" class="house-container">
+        <h2>Unknown</h2>
+        <div class="cards-container"></div>
+    </div>
+
+    <!-- Floating Button -->
+    <button id="exchange-button" class="floating-button"><i class="fas fa-exchange-alt"></i></button>
+
+    <!-- Modal -->
+    <div id="exchange-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Card Exchange</h2>
+            <form id="exchange-form">
+                <label for="recipient">Choose a person:</label>
+                <select id="recipient" name="recipient">
+                    <option value="friend1">Friend 1</option>
+                    <option value="friend2">Friend 2</option>
+                    <option value="friend3">Friend 3</option>
+                </select>
+                <label for="card">Choose a card:</label>
+                <select id="card" name="card">
+                    <!-- Options will be dynamically filled via JavaScript -->
+                </select>
+                <button type="submit">Exchange</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
